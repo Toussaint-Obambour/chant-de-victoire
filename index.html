@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#54162A">
+<meta name="android-theme-color" content="#54162A">
+<title>Chant de Victoire</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/icon-64.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Chant Victoire">
+<meta name="format-detection" content="telephone=no">
+</head>
+<body data-view="home">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v18H6.5A2.5 2.5 0 0 0 4 22z"/><path d="M4 4.5V22"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.5 4.3 13a4.8 4.8 0 0 1 6.8-6.8l.9.9.9-.9A4.8 4.8 0 0 1 19.7 13z"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4v-.2a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.6v-.2h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1z"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8 15.7 6.2M8.3 13.2l7.4 4.6"/></symbol>
+  <symbol id="i-font" viewBox="0 0 24 24"><path d="M4 19 9.5 5h1.6L16.6 19"/><path d="M6.4 14.4h7.8"/><path d="M16 19h4"/><path d="M16 15.5h4"/></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5.5l10-2v12.5"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></symbol>
+  <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></symbol>
+</svg>
+
+<div id="splash" class="splash" aria-hidden="true">
+  <img src="assets/logo-256.png" alt="">
+  <div class="splash-title">Chant de Victoire</div>
+  <div class="splash-sub">Église Évangélique du Gabon</div>
+</div>
+
+<!-- ACCUEIL -->
+<section id="view-home" class="view view-home" data-view="home">
+  <header class="hero">
+    <div class="hero-top">
+      <span class="hero-tag">Répertoire officiel</span>
+      <button class="icon-btn hero-gear" data-go="settings" aria-label="Réglages">
+        <svg><use href="#i-gear"/></svg>
+      </button>
+    </div>
+    <div class="logo-ring"><img src="assets/logo-or.png" alt="Croix huguenote"></div>
+    <h1>Chant de Victoire</h1>
+    <p class="church">Église Évangélique du Gabon<span>Région Synodale Ogooué-Estuaire</span><span>Paroisse Protestante de Jéricho</span></p>
+    <div class="hero-meta"><span id="heroCount">407</span> cantiques <i></i> n° 1 → 394</div>
+    <button class="search-pill" id="homeSearch" aria-label="Rechercher un cantique">
+      <svg><use href="#i-search"/></svg>
+      <span>Rechercher un cantique, un titre, un mot…</span>
+    </button>
+  </header>
+
+  <main class="page home-main">
+    <section id="continueCard" class="card continue-card is-hidden"></section>
+
+    <section class="quick-grid">
+      <button class="quick-card" data-go="list" data-range="all">
+        <span class="quick-ico"><svg><use href="#i-book"/></svg></span>
+        <span class="quick-txt"><b>Parcourir</b><small>Tout le répertoire</small></span>
+        <svg class="quick-arrow"><use href="#i-chevron-right"/></svg>
+      </button>
+      <button class="quick-card" data-go="list" data-fav="1">
+        <span class="quick-ico gold"><svg><use href="#i-heart"/></svg></span>
+        <span class="quick-txt"><b>Mes favoris</b><small id="favCount">Aucun favori</small></span>
+        <svg class="quick-arrow"><use href="#i-chevron-right"/></svg>
+      </button>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Index des cantiques</h2>
+        <span class="section-sub">1 → 394</span>
+      </div>
+      <div class="range-grid" id="rangeGrid"></div>
+    </section>
+
+    <section class="section" id="favSection">
+      <div class="section-head">
+        <h2>Vos favoris</h2>
+        <button class="link-btn" data-go="list" data-fav="1">Tout voir</button>
+      </div>
+      <div id="favPreview" class="mini-list"><p class="empty">Touchez le cœur d'un cantique pour le retrouver ici.</p></div>
+    </section>
+
+    <footer class="app-footer">
+      <img src="assets/logo-or.png" alt="">
+      <p><b>Chant de Victoire</b> · version 1.5</p>
+      <p class="tiny">Application 100 % hors ligne · Église Évangélique du Gabon – Région Synodale Ogooué-Estuaire – Paroisse Protestante de Jéricho</p>
+    </footer>
+  </main>
+</section>
+
+<!-- LISTE -->
+<section id="view-list" class="view view-list" data-view="list">
+  <header class="page-head">
+    <button class="icon-btn" data-back="home" aria-label="Retour"><svg><use href="#i-back"/></svg></button>
+    <div class="page-title">
+      <h1 id="listTitle">Cantiques</h1>
+      <span id="listCount">407 cantiques</span>
+    </div>
+    <button class="icon-btn" data-go="settings" aria-label="Réglages"><svg><use href="#i-gear"/></svg></button>
+  </header>
+
+  <div class="list-tools">
+    <label class="search-field">
+      <svg><use href="#i-search"/></svg>
+      <input id="search" type="search" inputmode="search" autocomplete="off" placeholder="Numéro, titre ou parole…">
+      <button id="clearSearch" class="clear-search is-hidden" aria-label="Effacer">×</button>
+    </label>
+    <div class="chips" role="tablist">
+      <button class="chip is-active" data-sort="num">N°</button>
+      <button class="chip" data-sort="az">A – Z</button>
+      <button class="chip" id="chipFav" data-fav="1"><svg><use href="#i-heart"/></svg> Favoris</button>
+    </div>
+  </div>
+
+  <div id="list" class="song-list" aria-live="polite"></div>
+  <div id="listEmpty" class="empty-state is-hidden">
+    <svg><use href="#i-search"/></svg>
+    <p>Aucun cantique ne correspond à cette recherche.</p>
+  </div>
+</section>
+
+<!-- FICHE CHANT -->
+<section id="view-song" class="view view-song" data-view="song">
+  <header class="song-bar">
+    <button class="icon-btn" data-back="list" aria-label="Retour"><svg><use href="#i-back"/></svg></button>
+    <div class="song-bar-title">Chant de Victoire</div>
+    <div class="song-actions">
+      <button class="icon-btn" id="btnFav" aria-label="Ajouter aux favoris"><svg><use href="#i-heart"/></svg></button>
+      <button class="icon-btn" id="btnShare" aria-label="Partager"><svg><use href="#i-share"/></svg></button>
+      <button class="icon-btn" id="btnFont" aria-label="Taille du texte"><svg><use href="#i-font"/></svg></button>
+    </div>
+  </header>
+
+  <article class="song-sheet">
+    <div class="song-kicker">Cantique <span id="songNum">1</span></div>
+    <h1 id="songTitle">—</h1>
+    <div class="song-meta" id="songMeta"></div>
+    <div class="lyrics" id="lyrics"></div>
+  </article>
+
+  <div class="song-nav">
+    <button id="btnPrev" class="nav-btn"><svg><use href="#i-chevron-left"/></svg><span>Précédent</span></button>
+    <button id="btnProjection" class="projection-btn"><svg><use href="#i-expand"/></svg><span>Mode culte</span></button>
+    <button id="btnNext" class="nav-btn"><span>Suivant</span><svg><use href="#i-chevron-right"/></svg></button>
+  </div>
+</section>
+
+<!-- RÉGLAGES -->
+<section id="view-settings" class="view view-settings" data-view="settings">
+  <header class="page-head">
+    <button class="icon-btn" data-back="home" aria-label="Retour"><svg><use href="#i-back"/></svg></button>
+    <div class="page-title"><h1>Réglages</h1><span>Lecture et confort</span></div>
+    <span class="head-spacer"></span>
+  </header>
+
+  <main class="page settings-main">
+    <section class="card settings-card">
+      <h2>Apparence</h2>
+      <div class="segmented" id="themeSeg">
+        <button data-theme="light"><svg><use href="#i-sun"/></svg> Clair</button>
+        <button data-theme="dark"><svg><use href="#i-moon"/></svg> Sombre</button>
+        <button data-theme="auto"><svg><use href="#i-phone"/></svg> Auto</button>
+      </div>
+      <div class="setting-row">
+        <div class="setting-label"><b>Taille du texte</b><small>Pour lire sans lunettes</small></div>
+        <div class="font-stepper">
+          <button id="fontMinus" aria-label="Réduire">A−</button>
+          <span id="fontValue">19</span>
+          <button id="fontPlus" aria-label="Agrandir">A+</button>
+        </div>
+      </div>
+      <div class="setting-row">
+        <div class="setting-label"><b>Interligne aéré</b><small>Plus d'espace entre les lignes</small></div>
+        <button class="switch" id="switchLine" role="switch" aria-checked="false"><span></span></button>
+      </div>
+      <div class="setting-row">
+        <div class="setting-label"><b>Écran toujours allumé</b><small>Pendant la lecture d'un cantique</small></div>
+        <button class="switch" id="switchScreen" role="switch" aria-checked="true"><span></span></button>
+      </div>
+    </section>
+
+    <section class="card settings-card about-card">
+      <img src="assets/logo-or.png" alt="">
+      <h2>Chant de Victoire</h2>
+      <p>Église Évangélique du Gabon<br>Région Synodale Ogooué-Estuaire<br>Paroisse Protestante de Jéricho</p>
+      <div class="about-meta">407 cantiques · n° 1 → 394 · version 1.5</div>
+      <p class="tiny">Toutes les paroles et les partitions sont enregistrées dans le téléphone. Aucune connexion internet n'est nécessaire.</p>
+      <p class="tiny">Partitions : Cantiquest et recueil de 1926 · 331 cantiques disponibles</p>
+    </section>
+
+    <button class="reset-btn" id="resetApp">Réinitialiser les favoris et l'historique</button>
+  </main>
+</section>
+
+<nav class="tabbar" id="tabbar" aria-label="Navigation">
+  <button data-go="home" data-tab="home"><svg><use href="#i-home"/></svg><span>Accueil</span></button>
+  <button data-go="list" data-tab="list"><svg><use href="#i-book"/></svg><span>Cantiques</span></button>
+  <button data-go="list" data-fav="1" data-tab="fav"><svg><use href="#i-heart"/></svg><span>Favoris</span></button>
+  <button data-go="settings" data-tab="settings"><svg><use href="#i-gear"/></svg><span>Réglages</span></button>
+</nav>
+
+<div id="fontSheet" class="sheet is-hidden" role="dialog" aria-modal="true" aria-label="Taille du texte">
+  <div class="sheet-backdrop" data-close-sheet></div>
+  <div class="sheet-panel">
+    <div class="sheet-handle"></div>
+    <h3>Taille du texte</h3>
+    <div class="sheet-font-row">
+      <button id="sheetMinus" aria-label="Réduire">A−</button>
+      <span id="sheetFontValue">19</span>
+      <button id="sheetPlus" aria-label="Agrandir">A+</button>
+    </div>
+    <div class="setting-row">
+      <div class="setting-label"><b>Interligne aéré</b><small>Plus d'espace entre les lignes</small></div>
+      <button class="switch" id="sheetLine" role="switch" aria-checked="false"><span></span></button>
+    </div>
+    <button class="sheet-done" data-close-sheet>Terminé</button>
+  </div>
+</div>
+
+<div id="partitionView" class="partition-view is-hidden" role="dialog" aria-modal="true" aria-label="Partition">
+  <header class="part-bar">
+    <button class="icon-btn" id="partClose" aria-label="Fermer la partition"><svg><use href="#i-back"/></svg></button>
+    <div class="part-title"><b id="partTitle">Partition</b><small id="partSub"></small></div>
+    <div class="part-zoom">
+      <button class="part-zoom-btn" id="partMinus" aria-label="Réduire">−</button>
+      <button class="part-zoom-btn" id="partReset" aria-label="Ajuster à l'écran">1:1</button>
+      <button class="part-zoom-btn" id="partPlus" aria-label="Agrandir">+</button>
+    </div>
+  </header>
+  <div class="part-viewport" id="partViewport">
+    <div class="part-track" id="partTrack"></div>
+  </div>
+  <p class="part-foot" id="partFoot">Partitions : Cantiquest et recueil de 1926</p>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/chants.js"></script>
+<script src="assets/partitions.js"></script>
+<script src="app.js"></script>
+<script src="pwa.js"></script>
+</body>
+</html>
